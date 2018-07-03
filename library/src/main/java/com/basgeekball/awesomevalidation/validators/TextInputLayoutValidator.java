@@ -1,6 +1,7 @@
 package com.basgeekball.awesomevalidation.validators;
 
 import android.support.design.widget.TextInputLayout;
+import android.view.View;
 
 import com.basgeekball.awesomevalidation.R;
 import com.basgeekball.awesomevalidation.ValidationHolder;
@@ -22,7 +23,14 @@ public class TextInputLayoutValidator extends Validator {
             TextInputLayout textInputLayout = validationHolder.getTextInputLayout();
             textInputLayout.setErrorTextAppearance(mErrorTextAppearance);
             textInputLayout.setErrorEnabled(true);
-            textInputLayout.setError(validationHolder.getErrMsg());
+            if(validationHolder.getErrMsg() == null){
+                textInputLayout.setError(" ");
+                if(textInputLayout.getChildCount() >= 2) {
+                    textInputLayout.getChildAt(1).setVisibility(View.GONE);
+                }
+            }else {
+                textInputLayout.setError(validationHolder.getErrMsg());
+            }
         }
     };
 
