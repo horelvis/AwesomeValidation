@@ -36,9 +36,9 @@ bintray {
         repo = "android-libraries"
         name = "com.basgeekball.awesomevalidation"
         licenses = ["MIT"]
-        websiteUrl = "https://github.com/thyrlian/AwesomeValidation"
-        issueTrackerUrl = "https://github.com/thyrlian/AwesomeValidation/issues"
-        vcsUrl = "https://github.com/thyrlian/AwesomeValidation.git"
+        websiteUrl = "https://github.com/horelvis/AwesomeValidation"
+        issueTrackerUrl = "https://github.com/horelvis/AwesomeValidation/issues"
+        vcsUrl = "https://github.com/horelvis/AwesomeValidation.git"
         labels = ["Android", "UI", "validation"]
         version {
             name = project.ext.versionName
